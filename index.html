@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Museum of Outages — The Most Famous Tech Outages in History, Exhibit by Exhibit | Curated by Bishow Pandey</title>
+<meta name="description" content="A permanent exhibition of the days the internet fell over: the CrowdStrike crash, Facebook's BGP disappearance, the AWS typo, Knight Capital's 45 minutes. Eleven famous outages with what actually happened and the lesson each one taught — curated by platform engineer Bishow Pandey.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://bishowpratap7.github.io/museumofoutages/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Museum of Outages">
+<meta property="og:title" content="Museum of Outages — The Most Famous Tech Outages in History">
+<meta property="og:description" content="Eleven legendary outages, preserved under glass: what broke, how much it cost, and the lesson. Curated by Bishow Pandey.">
+<meta property="og:url" content="https://bishowpratap7.github.io/museumofoutages/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@bishowppandey">
+<meta name="twitter:title" content="Museum of Outages — Famous Tech Outages, Exhibit by Exhibit">
+<meta name="twitter:description" content="The CrowdStrike crash, the Facebook BGP vanishing act, the $440M typo-class disasters — preserved, explained, and rated.">
+<link rel="alternate" type="application/rss+xml" title="Museum of Outages" href="feed.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Museum of Outages","url":"https://bishowpratap7.github.io/museumofoutages/","description":"A permanent exhibition of the most famous technology outages in history, curated by Bishow Pandey.","author":{"@type":"Person","name":"Bishow Pandey","url":"https://x.com/bishowppandey","sameAs":["https://x.com/bishowppandey","https://github.com/bishowpratap7","https://www.linkedin.com/in/bishowpandey","https://bishowpratap7.github.io/bishow-pandey-tech-blogs/","https://bishowpratap7.github.io/thedevdesk/","https://bishowpratap7.github.io/scrollpatrol/","https://bishowpratap7.github.io/theworlddesk/","https://bishowpratap7.github.io/thestockdesk/","https://bishowpratap7.github.io/theshoppingdesk/","https://bishowpratap7.github.io/thecozydesk/","https://bishowpratap7.github.io/thefoodiedesk/","https://bishowpratap7.github.io/thestyledesk/","https://bishowpratap7.github.io/museumofoutages/"]}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What was the biggest tech outage in history?","acceptedAnswer":{"@type":"Answer","text":"By reach, the CrowdStrike incident of July 19, 2024: a faulty security-sensor update crashed an estimated 8.5 million Windows machines worldwide, grounding flights, delaying surgeries and silencing broadcasters. It is Exhibit No. 3 in this museum."}},{"@type":"Question","name":"What caused the great Facebook outage of 2021?","acceptedAnswer":{"@type":"Answer","text":"A configuration change during routine maintenance withdrew the BGP routes to Facebook's DNS servers, making Facebook, Instagram and WhatsApp unreachable for roughly six hours — and locking engineers out of the very tools needed to fix it, since those ran on the same network."}},{"@type":"Question","name":"What is the longest outage in the museum?","acceptedAnswer":{"@type":"Answer","text":"GitHub's incident of October 21, 2018: a 43-second network partition triggered an automatic database failover that left the two coasts holding different writes. GitHub deliberately chose data integrity over speed and stayed degraded for 24 hours and 11 minutes rather than risk losing anyone's code."}},{"@type":"Question","name":"Who curates the Museum of Outages?","acceptedAnswer":{"@type":"Answer","text":"Bishow Pandey, a senior platform engineer who works on Kubernetes, cloud infrastructure and application security. The museum is part of his desk network; every exhibit is summarized from the company's own public postmortem."}},{"@type":"Question","name":"How does an outage earn a place in the museum?","acceptedAnswer":{"@type":"Answer","text":"Scale, story and lesson. An incident becomes an exhibit when it was big enough to make the news, strange enough to teach something new, and honest enough to have a public postmortem the rest of us can learn from."}}]}
+</script>
+<!--ITEMLIST:START-->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ItemList", "name": "Exhibits in the Museum of Outages", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Knight Capital: The 45-Minute Fortune (2012)"}, {"@type": "ListItem", "position": 2, "name": "Cloudflare: One Rule to Slow Them All (2019)"}, {"@type": "ListItem", "position": 3, "name": "CrowdStrike: The Day the World Blue-Screened (2024)"}, {"@type": "ListItem", "position": 4, "name": "Fastly: The Customer Who Broke the Web by Using It Correctly (2021)", "url": "https://www.fastly.com/blog/summary-of-june-8-outage"}, {"@type": "ListItem", "position": 5, "name": "Facebook: The Day the Internet's Biggest House Lost Its Own Address (2021)"}, {"@type": "ListItem", "position": 6, "name": "AWS: The Automation That Congested Its Own Cloud (2021)"}, {"@type": "ListItem", "position": 7, "name": "AWS S3: The Four-Hour Typo (2017)"}, {"@type": "ListItem", "position": 8, "name": "Dyn: The Webcam Army (2016)"}, {"@type": "ListItem", "position": 9, "name": "British Airways: The Power Cable Incident (2017)"}, {"@type": "ListItem", "position": 10, "name": "OVHcloud: The Night the Cloud Caught Fire (2021)"}, {"@type": "ListItem", "position": 11, "name": "GitHub: Forty-Three Seconds, Twenty-Four Hours (2018)", "url": "https://blog.github.com/2018-10-30-oct21-post-incident-analysis/"}]}
+</script>
+<!--ITEMLIST:END-->
+<style>
+:root{--bg:#0c0a08;--panel:#161310;--line:#2e2820;--txt:#efe7d6;--mut:#b3a789;--gold:#c9a227;--gold2:#e8c766;--bar:#100d0af5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times New Roman',serif}
+a{color:var(--gold2)}
+.bar{position:sticky;top:0;z-index:20;background:var(--bar);border-bottom:2px solid var(--gold);padding:.55rem 1rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.bar .brand{font-size:1.25rem;font-weight:bold;letter-spacing:.4px}
+.bar .by{color:var(--mut);font-size:.9rem}.bar .by a{color:var(--gold2);text-decoration:none;font-weight:bold}
+.follow{margin-left:auto;background:#000;color:#fff;border:1px solid #555;border-radius:999px;padding:.35rem .9rem;text-decoration:none;font-family:Arial,sans-serif;font-size:.85rem;font-weight:bold}
+.follow:hover{background:#1d9bf0;border-color:#1d9bf0}
+main{max-width:980px;margin:0 auto;padding:1.4rem 1rem 3rem}
+h1{font-size:2.3rem;line-height:1.15;margin:.4rem 0;text-align:center}
+.sub{text-align:center;color:var(--gold);font-style:italic;font-size:1.1rem}
+.lede{color:var(--mut);font-size:1.05rem;line-height:1.6;max-width:760px;margin:1rem auto;text-align:center}
+.wing{margin-top:2.6rem}
+.wing h2{font-size:1.5rem;border-bottom:1px solid var(--gold);padding-bottom:.35rem;color:var(--gold2)}
+.wing .wingsub{color:var(--mut);font-style:italic;margin-top:.3rem}
+.exhibit{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:1.1rem 1.25rem;margin-top:1rem}
+.exhibit .no{font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
+.exhibit h3{margin:.3rem 0 .2rem;font-size:1.35rem}
+.exhibit .meta{font-family:Arial,sans-serif;font-size:.85rem;color:var(--mut)}
+.exhibit .stats{display:flex;gap:1.2rem;flex-wrap:wrap;margin:.7rem 0;font-family:Arial,sans-serif}
+.exhibit .stat b{display:block;color:var(--gold2);font-size:1.05rem}
+.exhibit .stat span{font-size:.72rem;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+.exhibit p{line-height:1.6;color:#ddd2ba}
+.exhibit .lesson{background:#0c0a08;border:1px dashed var(--gold);border-radius:8px;padding:.6rem .8rem;color:var(--txt)}
+.exhibit .lesson b{color:var(--gold2)}
+section.plain{margin-top:2.6rem;border-top:1px solid var(--line);padding-top:1rem}
+section.plain p,section.plain li{color:var(--mut);line-height:1.6}
+.er .item{border-left:3px solid #b3402a;padding:.35rem .7rem;margin:.45rem 0;background:var(--panel);border-radius:0 8px 8px 0}
+.er .item a{color:var(--txt);text-decoration:none;font-weight:bold}
+.er .item .m{font-family:Arial,sans-serif;font-size:.78rem;color:var(--mut)}
+.disc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;color:var(--mut);font-size:.92rem;line-height:1.5;margin-top:1.5rem}
+footer{border-top:2px solid var(--gold);margin-top:2.5rem;padding:1.2rem 1rem 2rem;text-align:center;color:var(--mut)}
+footer .desks a{margin:0 .45rem}
+</style>
+</head>
+<body>
+<div class="bar">
+  <span class="brand">🏛️ Museum of Outages</span>
+  <span class="by">curated by <a href="https://x.com/bishowppandey" target="_blank" rel="noopener">Bishow Pandey</a></span>
+  <a class="follow" href="https://x.com/bishowppandey" target="_blank" rel="noopener">Follow @bishowppandey on X</a>
+</div>
+<main>
+  <h1>The Museum of Outages</h1>
+  <p class="sub">A permanent exhibition of the days the internet fell over.</p>
+  <p class="lede">Every exhibit in this museum really happened, cost somebody a fortune, and taught the whole industry something it should already have known. Wander the wings: deployments that ate companies, configurations that erased countries' worth of websites, and one very small room for a very famous typo. Each plaque gives the date, the damage, what actually happened — and the lesson, in one line.</p>
+
+  <section class="plain er" id="emergency">
+    <h2 style="color:var(--gold2)">🚑 The Emergency Room — future exhibits</h2>
+    <p>Incidents reported in the last two weeks on the public status pages of GitHub, Cloudflare, npm and Vercel. Most will be discharged and forgotten. A few will earn a plaque.</p>
+    <div id="er-list"><p>Warming up the ambulances…</p></div>
+    <!--ER:START-->
+<div class="er">
+<div class="item"><a href="https://stspg.io/n478rfsspcmr">Incident with Git Operations</a><div class="m">GitHub · status: resolved · Nov 03, 20:57 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/pfvfug94jq4q">Missing Logs and Traces in Cloudflare Observability Platform</a><div class="m">Cloudflare · status: resolved · Nov 03, 18:40 UTC</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/7gixemnw9oei">Increased Durable Object Errors in the Dallas, TX US region</a><div class="m">Cloudflare · status: resolved · Nov 03, 15:38 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/nbyxn84kvb6o">Cloudflare Workers and Pages build errors </a><div class="m">Cloudflare · status: resolved · Nov 03, 14:46 UTC · impact: minor</div></div>
+<div class="item"><a href="https://stspg.io/h1xqhrcn5gqn">Incident with API, Git, and Copilot requests</a><div class="m">GitHub · status: resolved · Nov 03, 13:25 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/6c4ak19xodyt">Elevated number of 5xx errors in HKG</a><div class="m">Cloudflare · status: resolved · Nov 03, 07:24 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/j25w3rpv45gs">Network Performance Issues in APJC</a><div class="m">Cloudflare · status: resolved · Nov 03, 04:44 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/n5mvqjs26jg9">Cloudflare Container Issues</a><div class="m">Cloudflare · status: resolved · Nov 03, 04:12 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/3bv9locsg7ln"> Cloudflare Gateway DNS-over-TLS Connectivity Issues over IPv4</a><div class="m">Cloudflare · status: resolved · Nov 02, 22:12 UTC · impact: minor</div></div>
+<div class="item"><a href="https://stspg.io/ns6pj9qy9glb">Elevated errors on GPT-5.4 Nano</a><div class="m">GitHub · status: resolved · Nov 02, 17:46 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/7he1pmetw77p">Worker Deployments Delayed</a><div class="m">Cloudflare · status: resolved · Nov 02, 16:41 UTC · impact: minor</div></div>
+<div class="item"><a href="https://www.cloudflarestatus.com/incidents/5tlm9r9j9rpo">Cache purge delays in Qingdao Shandong, China</a><div class="m">Cloudflare · status: resolved · Oct 31, 06:41 UTC · impact: minor</div></div>
+</div>
+<!--ER:END-->
+  </section>
+
+  <div class="wing">
+    <h2>Wing I — The Deployment Wing</h2>
+    <p class="wingsub">Nothing was wrong with the plan. The plan was shipped.</p>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 1 · Deployment Wing</div>
+      <h3>Knight Capital: The 45-Minute Fortune</h3>
+      <div class="meta">Knight Capital Group · August 1, 2012 · New York</div>
+      <div class="stats"><div class="stat"><b>≈45 minutes</b><span>Duration</span></div><div class="stat"><b>≈$440 million</b><span>Lost</span></div><div class="stat"><b>1 of 8 servers</b><span>Missed the update</span></div><div class="stat"><b>9.4 / 10</b><span>Pandey Scale</span></div></div>
+      <p>A technician deployed new trading code to seven of the firm's eight servers. The eighth kept an old flag whose original feature had been retired years earlier — and whose code, when woken, began firing millions of unintended orders into the market. By the time anyone could stop it, Knight had lost about $440 million and, effectively, the company.</p>
+      <p class="lesson"><b>The lesson:</b> Dead code is a loaded gun, and a deployment you didn't verify on every machine is a rumor, not a release.</p>
+    </article>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 2 · Deployment Wing</div>
+      <h3>Cloudflare: One Rule to Slow Them All</h3>
+      <div class="meta">Cloudflare · July 2, 2019 · Global</div>
+      <div class="stats"><div class="stat"><b>≈30 minutes</b><span>Severe impact</span></div><div class="stat"><b>1 regex</b><span>Root cause</span></div><div class="stat"><b>Global, instantly</b><span>Rollout</span></div><div class="stat"><b>7.8 / 10</b><span>Pandey Scale</span></div></div>
+      <p>A single firewall rule containing a regular expression prone to catastrophic backtracking was pushed to Cloudflare's entire global network at once. Edge servers burned all their CPU matching the pattern, and a large share of the web behind Cloudflare stalled until the rule was rolled back.</p>
+      <p class="lesson"><b>The lesson:</b> A global, instant rollout means a global, instant blast radius. Canary everything — especially the safety systems.</p>
+    </article>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 3 · Deployment Wing · The Centerpiece</div>
+      <h3>CrowdStrike: The Day the World Blue-Screened</h3>
+      <div class="meta">CrowdStrike / Microsoft Windows · July 19, 2024 · Worldwide</div>
+      <div class="stats"><div class="stat"><b>≈8.5 million</b><span>Windows machines crashed</span></div><div class="stat"><b>Days</b><span>Full recovery for many</span></div><div class="stat"><b>1 content file</b><span>Root cause</span></div><div class="stat"><b>10 / 10</b><span>Pandey Scale</span></div></div>
+      <p>A routine content update for CrowdStrike's Falcon sensor contained a flaw that crashed the Windows machines it protected — an estimated 8.5 million of them, by Microsoft's count. Airlines grounded flights, hospitals postponed procedures, broadcasters went off air, and because the fix often required hands on each keyboard, recovery took days in many places. It is widely regarded as the largest IT outage in history.</p>
+      <p class="lesson"><b>The lesson:</b> A content update is a code update. Anything that ships to every machine at once, at kernel level, deserves a staged rollout and a rehearsed undo.</p>
+    </article>
+  </div>
+
+  <div class="wing">
+    <h2>Wing II — The Hall of Configuration</h2>
+    <p class="wingsub">The systems were up. The map to reach them was not.</p>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 4 · Hall of Configuration</div>
+      <h3>Fastly: The Customer Who Broke the Web by Using It Correctly</h3>
+      <div class="meta">Fastly · June 8, 2021 · Global</div>
+      <div class="stats"><div class="stat"><b>49 minutes</b><span>To 95% restored</span></div><div class="stat"><b>85% of network</b><span>Returning errors</span></div><div class="stat"><b>27 days</b><span>The bug lay dormant</span></div><div class="stat"><b>8.1 / 10</b><span>Pandey Scale</span></div></div>
+      <p>A software update in May had quietly planted a bug in Fastly's CDN. Four weeks later, one customer pushed a perfectly valid configuration change — and lit the fuse. Within a minute, 85% of Fastly's network was returning errors, taking major news sites, commerce platforms and a government portal with it. Fastly detected it in about a minute and restored 95% of the network within 49 minutes, then published a postmortem so honest it belongs in a frame of its own. <a href="https://www.fastly.com/blog/summary-of-june-8-outage" target="_blank" rel="noopener">Read Fastly's summary</a>.</p>
+      <p class="lesson"><b>The lesson:</b> Dormant bugs wait for valid inputs, not attacks. And a fast, honest postmortem can turn your worst hour into your best advertisement.</p>
+    </article>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 5 · Hall of Configuration</div>
+      <h3>Facebook: The Day the Internet's Biggest House Lost Its Own Address</h3>
+      <div class="meta">Meta (Facebook, Instagram, WhatsApp) · October 4, 2021 · Global</div>
+      <div class="stats"><div class="stat"><b>≈6 hours</b><span>Duration</span></div><div class="stat"><b>3 apps</b><span>Vanished at once</span></div><div class="stat"><b>BGP routes</b><span>Withdrawn by config</span></div><div class="stat"><b>9.7 / 10</b><span>Pandey Scale</span></div></div>
+      <p>During routine maintenance, a command intended to check backbone capacity withdrew the BGP routes that told the world where Facebook's DNS servers lived. Facebook, Instagram and WhatsApp didn't crash — they became unfindable, which from the outside is the same thing. Recovery was slowed by a special cruelty: the internal tools, and even building access systems, depended on the same network that had just forgotten how to reach itself.</p>
+      <p class="lesson"><b>The lesson:</b> Your rescue tools must never depend on the thing they're rescuing. Out-of-band access is not a luxury; it's the fire exit.</p>
+    </article>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 6 · Hall of Configuration</div>
+      <h3>AWS: The Automation That Congested Its Own Cloud</h3>
+      <div class="meta">Amazon Web Services, US-EAST-1 · December 7, 2021</div>
+      <div class="stats"><div class="stat"><b>≈7 hours</b><span>Disruption</span></div><div class="stat"><b>1 region</b><span>That half the web rents</span></div><div class="stat"><b>Internal network</b><span>Congested itself</span></div><div class="stat"><b>8.6 / 10</b><span>Pandey Scale</span></div></div>
+      <p>Automated activity meant to scale capacity in AWS's internal network triggered an unexpected flood of connection attempts, congesting the link between that internal network and the main AWS network. Streaming services stuttered, delivery logistics wobbled, and thousands of companies discovered which of their "redundant" systems all lived in the same region in Virginia.</p>
+      <p class="lesson"><b>The lesson:</b> Automation fails at the same scale it succeeds. And "multi-AZ in one region" is a plan for weather, not for this.</p>
+    </article>
+  </div>
+
+  <div class="wing">
+    <h2>Wing III — The Typo Room</h2>
+    <p class="wingsub">A small room. One exhibit. Enormous echo.</p>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 7 · The Typo Room</div>
+      <h3>AWS S3: The Four-Hour Typo</h3>
+      <div class="meta">Amazon Web Services, S3 · February 28, 2017</div>
+      <div class="stats"><div class="stat"><b>≈4 hours</b><span>S3 impaired</span></div><div class="stat"><b>1 mistyped command</b><span>Root cause</span></div><div class="stat"><b>Far more servers</b><span>Removed than intended</span></div><div class="stat"><b>8.9 / 10</b><span>Pandey Scale</span></div></div>
+      <p>While debugging a billing issue, an engineer ran a command with a typo in it. Instead of removing a small set of servers, it removed far more — including the subsystems S3 needed to serve requests and to restart quickly. A remarkable share of the internet's storage went read-only for hours, and the restart itself took longer than AWS's design had ever rehearsed.</p>
+      <p class="lesson"><b>The lesson:</b> Guardrails beat careful people: dry runs, blast-radius limits, and restarts you have actually practiced at full scale.</p>
+    </article>
+  </div>
+
+  <div class="wing">
+    <h2>Wing IV — Fire, Power &amp; Malice</h2>
+    <p class="wingsub">Not all outages are made of software.</p>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 8 · Fire, Power &amp; Malice</div>
+      <h3>Dyn: The Webcam Army</h3>
+      <div class="meta">Dyn (DNS) · October 21, 2016 · US &amp; Europe</div>
+      <div class="stats"><div class="stat"><b>All day, in waves</b><span>Duration</span></div><div class="stat"><b>Mirai botnet</b><span>Weapon</span></div><div class="stat"><b>Cameras &amp; DVRs</b><span>The soldiers</span></div><div class="stat"><b>8.4 / 10</b><span>Pandey Scale</span></div></div>
+      <p>The Mirai botnet — an army of hijacked cameras, DVRs and other forgotten internet gadgets — flooded DNS provider Dyn with traffic. Because so many major sites relied on that one directory, household names became unreachable in waves across the US East Coast and Europe, even though their own servers were perfectly healthy.</p>
+      <p class="lesson"><b>The lesson:</b> DNS is a single point of failure wearing a trench coat. Two providers, or one very bad day.</p>
+    </article>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 9 · Fire, Power &amp; Malice</div>
+      <h3>British Airways: The Power Cable Incident</h3>
+      <div class="meta">British Airways · May 27, 2017 · London Heathrow &amp; Gatwick</div>
+      <div class="stats"><div class="stat"><b>A bank-holiday weekend</b><span>Duration</span></div><div class="stat"><b>≈75,000</b><span>Passengers affected</span></div><div class="stat"><b>Power supply</b><span>Root cause</span></div><div class="stat"><b>8.8 / 10</b><span>Pandey Scale</span></div></div>
+      <p>A power failure at a data center — the airline blamed a power supply issue, with reports of an accidental disconnection and a damaging surge on restoration — toppled BA's systems worldwide at the start of a holiday weekend. Hundreds of flights were cancelled, tens of thousands of passengers slept in terminals, and the recovery cost the airline tens of millions of pounds.</p>
+      <p class="lesson"><b>The lesson:</b> The most powerful admin interface in any data center is still a power cable. Protect it like production, because it is.</p>
+    </article>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 10 · Fire, Power &amp; Malice</div>
+      <h3>OVHcloud: The Night the Cloud Caught Fire</h3>
+      <div class="meta">OVHcloud, Strasbourg · March 10, 2021 · France</div>
+      <div class="stats"><div class="stat"><b>1 data center</b><span>Destroyed</span></div><div class="stat"><b>Thousands of sites</b><span>Offline</span></div><div class="stat"><b>Same-building backups</b><span>Lost with the originals</span></div><div class="stat"><b>9.1 / 10</b><span>Pandey Scale</span></div></div>
+      <p>Fire tore through OVHcloud's SBG2 data center in Strasbourg in the middle of the night, destroying it and damaging its neighbor. No one was hurt — the one perfect outcome — but thousands of websites went dark, and customers whose backups lived in the same facility discovered that their copies had burned beside the originals.</p>
+      <p class="lesson"><b>The lesson:</b> A backup that shares a fate with the original is not a backup. It's a second copy of the same loss.</p>
+    </article>
+  </div>
+
+  <div class="wing">
+    <h2>Wing V — The Partition Gallery</h2>
+    <p class="wingsub">Forty-three seconds of silence; a day of consequences.</p>
+
+    <article class="exhibit">
+      <div class="no">Exhibit No. 11 · The Partition Gallery</div>
+      <h3>GitHub: Forty-Three Seconds, Twenty-Four Hours</h3>
+      <div class="meta">GitHub · October 21–22, 2018 · Global</div>
+      <div class="stats"><div class="stat"><b>43 seconds</b><span>Network partition</span></div><div class="stat"><b>24 h 11 min</b><span>Degraded service</span></div><div class="stat"><b>0</b><span>Data lost</span></div><div class="stat"><b>9.0 / 10</b><span>Pandey Scale</span></div></div>
+      <p>During maintenance on optical equipment, GitHub's East and West Coast facilities lost sight of each other for 43 seconds. Automated failover promoted West Coast database primaries — but a few seconds of East Coast writes hadn't replicated, and when the link healed, the two sides disagreed about the truth. GitHub chose to protect the data rather than the uptime, and spent a day reconciling by hand. The final count: zero data lost, and a masterclass in choosing the right thing to sacrifice. <a href="https://blog.github.com/2018-10-30-oct21-post-incident-analysis/" target="_blank" rel="noopener">Read GitHub's analysis</a>.</p>
+      <p class="lesson"><b>The lesson:</b> Consistency versus availability isn't a textbook diagram; it's a decision you'll make at 3 a.m. Make it in advance, in writing.</p>
+    </article>
+  </div>
+
+  <section class="plain">
+    <h2>About this museum</h2>
+    <p>The Museum of Outages is curated by <strong>Bishow Pandey</strong>, a senior software and platform engineer who works on Kubernetes, cloud infrastructure and application security — which is to say, a man professionally invested in keeping new exhibits out of this building. Every exhibit is summarized in the museum's own words from the company's public postmortem or official statement; figures are as reported at the time. The Pandey Scale (0–10) is the curator's entirely subjective rating of an outage's scale, story and teaching value.</p>
+    <p>The collection grows when an incident is big enough to make the news, strange enough to teach something new, and honest enough to publish a postmortem. The Emergency Room above watches the major status pages, looking for future exhibits.</p>
+  </section>
+
+  <div class="disc"><strong>A note on accuracy:</strong> outage history is told by the companies involved, and sometimes retold loosely. This museum sticks to the official postmortems and contemporaneous reporting, and marks estimates with ≈. If you spot an error on a plaque, tell the curator on X — corrections are made on the record.</div>
+</main>
+<footer>
+  <p style="font-size:1.05rem;color:var(--txt)"><strong>Museum of Outages</strong> — a desk by Bishow Pandey</p>
+  <p>Admission is free. The tuition, for the companies in here, was not. <a href="https://x.com/bishowppandey" target="_blank" rel="noopener"><strong>Follow @bishowppandey on X</strong></a> for new exhibits.</p>
+  <p class="desks">The desk network:
+    <a href="https://bishowpratap7.github.io/thedevdesk/">The Dev Desk</a> ·
+    <a href="https://bishowpratap7.github.io/scrollpatrol/">Scroll Patrol</a> ·
+    <a href="https://bishowpratap7.github.io/theworlddesk/">The World Desk</a> ·
+    <a href="https://bishowpratap7.github.io/thestockdesk/">The Stock Desk</a> ·
+    <a href="https://bishowpratap7.github.io/theshoppingdesk/">The Shopping Desk</a> ·
+    <a href="https://bishowpratap7.github.io/thecozydesk/">The Cozy Desk</a> ·
+    <a href="https://bishowpratap7.github.io/thefoodiedesk/">The Foodie Desk</a> ·
+    <a href="https://bishowpratap7.github.io/thestyledesk/">The Style Desk</a> ·
+    <a href="https://bishowpratap7.github.io/museumofoutages/">Museum of Outages</a>
+  </p>
+  <p>Part of <a href="https://bishowpratap7.github.io/bishow-pandey-tech-blogs/">Bishow Pandey's</a> desk network</p>
+</footer>
+<script>
+const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+async function boot(){
+  try{
+    const r=await fetch('data/feed.json?v='+Math.floor(Date.now()/1800000));
+    const D=await r.json();
+    const el=document.getElementById('er-list');
+    if(D.incidents&&D.incidents.length){
+      el.innerHTML=D.incidents.map(i=>`<div class="er item"><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a><div class="m">${esc(i.provider)} · status: ${esc(i.status)} · ${esc(i.date)}${i.impact&&i.impact!=='none'?' · impact: '+esc(i.impact):''}</div></div>`).join('');
+    } else {
+      el.innerHTML='<p>All quiet on the status pages — the Emergency Room is empty. Enjoy it while it lasts.</p>';
+    }
+  }catch(e){ document.getElementById('er-list').innerHTML='<p>The Emergency Room board is refreshing — check back in a few minutes.</p>'; }
+}
+boot();
+</script>
+</body>
+</html>
